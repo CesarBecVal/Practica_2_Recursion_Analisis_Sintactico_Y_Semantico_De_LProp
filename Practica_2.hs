@@ -1,10 +1,10 @@
 
 {-
-    Práctica 2 - Recursión Estructural, Listas, Árboles y
-                 Definiciones Inductivas
+    Práctica 2 - Recursión Análisis Sintactico y Semantico
+                 de LProp
     Profesor: Dr. Marco Vladimir Lemus Yañez
     Ayudante: Dr. Fernando Cruz Pineda
-    Fecha: 27/02/2026 
+    Fecha: 13/03/2026 
 
     Integrantes del equipo:
     - Becerra Valencia César
