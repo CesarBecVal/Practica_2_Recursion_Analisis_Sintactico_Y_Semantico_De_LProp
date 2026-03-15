@@ -170,3 +170,25 @@ esContradiccion p = not (esSatisfacible p)
 
 -- 4.4 Lenguaje Proposicional Mínimo - Definición de nuevo tipo algebraico y función aMin
 
+
+{-
+    LPropMin: Nuevo tipo algebraico que representa fórmulas proposicionales utilizando solo los conectivos Not, And, Or.
+    La función aMin toma una fórmula de tipo LProp y la convierte a una fórmula equivalente de tipo LPropMin utilizando solo los conectivos permitidos.
+-}
+data LPropMin = VarMin String
+                | NotMin LPropMin
+                | AndMin LPropMin LPropMin
+                | OrMin LPropMin LPropMin
+                deriving (Show, Eq)
+
+{-
+    aMin: Función que convierte una fórmula de tipo LProp a una fórmula equivalente de tipo LPropMin.
+    La función recorre la estructura de la fórmula original y construye una nueva fórmula utilizando solo los conectivos Not, And, Or.
+    Para el caso del conectivo Imp, se utiliza la equivalencia p → q ≡ ¬p ∨ q para convertirlo a una fórmula sin implicación.
+-}
+aMin :: LProp -> LPropMin
+aMin (Var x) = VarMin x
+aMin (Not p) = NotMin (aMin p)
+aMin (And p q) = AndMin (aMin p) (aMin q)
+aMin (Or p q) = OrMin (aMin p) (aMin q)
+aMin (Imp p q) = OrMin (NotMin (aMin p)) (aMin q)
