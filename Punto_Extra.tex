@@ -1,1 +1,247 @@
-Aqui va el punto extra.
+\documentclass[12pt]{article}
+ 
+\usepackage{amsmath,amsthm,amssymb}
+
+\usepackage[spanish]{babel}
+\selectlanguage{spanish}
+\decimalpoint
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,amsmath,amscd}
+\usepackage{latexsym,xspace}
+\usepackage{epsfig}
+\usepackage{fancyhdr}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{color}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+%\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{xcolor}
+\usepackage{amssymb,amsmath,amscd}
+\usepackage{latexsym,xspace,bbm}
+\usepackage[spanish]{draftcopy}
+\usepackage[spanish]{babel}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{recycle}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{algpseudocode}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{microtype}
+
+\usepackage{listings}
+\usepackage{xcolor}
+\lstset{
+    language=Python,
+    backgroundcolor=\color{gray!10},
+    keywordstyle=\color{blue}\bfseries,
+    commentstyle=\color{green!50!black},
+    stringstyle=\color{orange},
+    basicstyle=\ttfamily\small,
+    frame=single,
+    tabsize=4,
+    showstringspaces=false
+}
+
+\theoremstyle{remark}
+
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\EE}{\mathbb{E}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\II}{\mathbb{I}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\Aa}{\mathcal{A}}
+\newcommand{\Bb}{\mathcal{B}}
+\newcommand{\Cc}{\mathcal{C}}
+\newcommand{\Dd}{\mathcal{D}}
+\newcommand{\Ee}{\mathcal{E}}
+\newcommand{\Ff}{\mathcal{F}}
+\newcommand{\Gg}{\mathcal{G}}
+\newcommand{\Hh}{\mathcal{H}}
+\newcommand{\Ii}{\mathcal{I}}
+\newcommand{\Mm}{\mathcal{M}}
+\newcommand{\Nn}{\mathcal{N}}
+\newcommand{\Oo}{\mathcal{O}}
+\newcommand{\Pp}{\mathcal{P}}
+\newcommand{\Qq}{\mathcal{Q}}
+\newcommand{\Uu}{\mathcal{U}}
+\newcommand{\1}{\mathbbm{1}}
+\newcommand{\indep}{\raisebox{0.05em}{\rotatebox[origin=c]{90}{$\models$}}}
+\newtheorem{ejercicio}{Ejercicio}
+
+% Configuración de márgenes
+\addtolength{\voffset}{-1cm}
+\addtolength{\hoffset}{-1.5cm}
+\addtolength{\textwidth}{3cm}
+\addtolength{\textheight}{2cm}
+
+% Configuración de encabezados y pies de página
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Profesor: Dr. Marco Vladimir Lemus Yáñez \\ Ayudantes: Naomi I. Reyes, Fernando Cruz}
+\rhead{Lógica Computacional} % Cambia "ESCRIBE tu nombre" por tu nombre
+\rfoot{\recycle}
+\cfoot{\vspace{-0.8cm}¿Realmente necesitas imprimir esta hoja?}
+\lfoot{\recycle}
+\renewcommand{\headrulewidth}{1pt}
+\pagenumbering{gobble}
+\footskip = 50pt
+
+% Comandos personalizados
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+
+% Título del documento
+\title{Práctica 2 - Punto Extra} 
+\author{ESCRIBE tu nombre}
+\date{\today}
+
+\begin{document}
+
+% Portada
+\thispagestyle{empty}
+\begin{figure}[ht]
+  \minipage{0.76\textwidth}
+  \includegraphics[width=4cm]{logo_unam.png}
+  \label{EscudoUNAM}
+  \endminipage
+  \minipage{0.32\textwidth}
+  \includegraphics[height=4.9cm, width=4cm]{logo_ciencias.png}
+  \label{EscudoFC}
+  \endminipage
+\end{figure}
+
+\begin{center}
+  \vspace{0.1cm}
+  \LARGE
+  UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO
+
+  \vspace{0.5cm}
+  \LARGE
+  FACULTAD DE CIENCIAS
+
+  \vspace{1.5cm}
+  \Large
+  \textbf{Práctica 2 - Punto Extra} 
+
+  \vspace{.01cm}
+  \normalsize
+  PRESENTA \\
+  \vspace{.3cm}
+  \large
+  \textbf{Becerra Valencia César 322064287 
+  \\ Cortes Nava José Luis 322115437
+  \\ Díaz Anavia Javier Omar} 
+
+  \vspace{1.3cm}
+  \normalsize
+  PROFESOR \\
+  \vspace{.3cm}
+  \large
+  \textbf{Dr. Marco Vladimir Lemus Yáñez} 
+
+  \vspace{1.3cm}
+  \normalsize
+  ASIGNATURA \\
+  \vspace{.3cm}
+  \large
+  \textbf{Lógica Computacional 2026-2}
+
+  \vspace{1.3cm}
+  \today
+\end{center}
+
+    \begin{itemize}
+         \item Punto extra: En pdf entregar la demostración formal que si
+            \[
+            \alpha \in Lpropmin \quad y \quad \beta \in Lprop
+            \]
+            tal que
+            \[
+            \alpha \equiv \beta
+            \]
+            entonces
+            \[
+            \Phi(\alpha) = \Phi(\beta)
+            \] 
+    \end{itemize}
+
+    \begin{proof}
+        Sea $\beta \in Lprop$ una formula proposicional y $\alpha = aMin(\beta) \in LPropmin$ su traducción. Para cualquier valor de verdad, se cumple que $\Phi(\alpha)=\Phi(\beta)$\\
+
+        Prueba por inducción estructural sobre $\beta$\\
+
+        \textbf{Caso Base:}    
+        Sea $\beta = P_i$ un simbolo proposicional.
+        Por definición, $aMin(P_i) = P_i$ y además $\Phi(P_i)=\Phi(P_i)$
+        Por lo tanto $\Phi(aMin(P_i)) = \Phi(P_i)$\\
+
+        \textbf{Hipótesis de Inducción:}
+        Supongamos que para las formulas $\gamma, \delta \in Lprop$, se cumple: 
+        \[
+        \Phi(aMin(\gamma)) = \Phi(\gamma)
+        \]
+        y
+        \[
+        \Phi(aMin(\delta)) = \Phi(\delta) 
+        \]
+        
+        \textbf{Paso Inductivo:}
+        Probaremos entonces que la propiedad se cumple para los operadores lógicos:
+        \begin{itemize}
+            \item $\beta = \gamma \implies \delta$
+            Por definición de $aMin$ se tiene que 
+            \[
+            \alpha = aMin(\gamma \implies \delta) = \neg aMin(\gamma) \lor aMin(\delta)
+            \]
+            Entonces
+            \[
+            \Phi(\neg aMin(\gamma) \lor aMin(\delta)) = H_\lor ( \Phi(\neg aMin(\gamma), aMin(\delta))) = H_\lor ( H_\neg(\Phi( aMin(\gamma)), aMin(\delta)))
+            \]
+            Por la Hipótesis de Inducción obtenemos:
+            \[
+            = H_\lor(H_\neg(\Phi(\gamma)), \Phi(\delta))
+            \]
+            Mientras que en $\beta$ nos queda:
+            \[
+            \Phi(\gamma \implies \delta) = H_{\implies} (\Phi(\gamma), \Phi(\delta)) 
+            \]
+            Verificaremos entonces con una tabla de verdad para ver si dan el mismo resultado:
+            
+
+                    \begin{center}
+                        
+                    
+                    \begin{tabular}{ccccc}
+                        $x$ & $y$ & $H_\neg (x)$ & $H_\lor (H_\neg (x), y)$ & $H_{\implies}(x,y) $ \\
+                        F & F & V & V & V\\
+                        F & V & V & V & V\\
+                        V & F & F & F & F\\
+                        V & V & F & V & V\\
+                    \end{tabular}
+\end{center}
+
+            Como ambas columnas finales son iguales, concluimos que $$H_{\lor}(H_{\neg}(\Phi(\gamma)), \Phi(\delta)) = H_{\implies}(\Phi(\gamma), \Phi(\delta)).$$
+            Por lo tanto $\Phi(\alpha) = \Phi(\beta)$.
+
+        \end{itemize}
+        
+
+        
+    \end{proof}
+
+    
+    
+\end{document}
